@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resume{
+            display: flex;
+            width: 100%;  
+        }
+        img{
+            border-radius: 50% ;
+            width: 80px;
+            padding: 10px;
+
+        }
+        .profile{
+            width: 50%;
+            height: 500px;
+            border: 1px solid black;
+            margin-right: 20px;
+            display: block;
+            background-color: antiquewhite;
+        }
+        .card{
+             width: 50%;
+             height: 500px;
+            border: 1px solid black;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(192, 191, 190);
+        }
+      
+        
+        
+    </style>
+</head>
+<body>
+    <div class="resume">
+    <div class="profile">
+        <h1 style="margin: 10px;">Resume Maker</h1>
+        <table><tr><td><img src="image.jpg" alt="my image"></td>
+            <td><h2>Hello </h2><p id="name"></p></td></tr></table>
+        
+       
+         <h2>Course: </h2><p id="class"></p>
+       <h2 >Programming Skills:</h2> 
+       <ul>
+        <li><p id="skill"></p></li>
+        <li><p id="skills"></p></li>
+        <li><p id="skillss"></p></li>
+       </ul>
+    </div>
+    
+    <div class="card">
+        <h1 style="text-align: center;">Card Details</h1>
+        Your Name:<br><input type="text" id="aaa"> <br><br>
+        Class:<br> <input type="text" id="bbb">
+   <br><br>
+   <table><tr>Programming Skills:</tr><br><br>
+   <tr><input type="text" id="ccc"></tr><br>
+   <tr> <input type="text" id="cc"></tr><br>
+   <tr><input type="text" id="c"><br></tr>
+</table>
+        
+            
+           
+            
+        <br>
+            <button onclick="abes()">Submit</button>
+         <script>
+          function abes(){
+          let x= document.getElementById("aaa");
+          let z=document.getElementById("bbb");
+          let z1=document.getElementById("ccc");
+          let z2=document.getElementById("cc");
+          let z3=document.getElementById("c");
+        let y=x.value;
+          let a=z.value;
+          let b=z1.value;
+          let b2=z2.value;
+          let b3=z3.value;
+          
+          //to access the value of x
+          document.getElementById("name").innerHTML=y;
+          document.getElementById("class").innerHTML=a;
+          document.getElementById("skill").innerHTML=b;
+         document.getElementById("skills").innerHTML=b2;
+         document.getElementById("skillss").innerHTML=b3;
+    }
+    
+         </script>
+    </div>
+    </div>
+</body>
+</html>

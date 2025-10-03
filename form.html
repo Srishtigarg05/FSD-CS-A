@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <div class="personal_info" style="border: 10px;">
+        <fieldset>
+    <legend><p>Personal Details</p></legend>
+    <form action="submit_form" method="post">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="name">Last Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="female">Female</option>
+            <option value="female">Male</option>
+            <option value="female">Others</option>
+        </select><br><br>
+        </fieldset>
+    </div>
+    <fieldset>
+       <legend><p>Contact Details:</p></legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="number" id="number"><br><br>
+      
+        <label for="address">Address:</label><br>
+        <textarea></textarea>
+</fieldset>
+
+<fieldset>
+       <legend><p>Academic Details:</p></legend> 
+         <label for="board">12th Board:</label>
+         <input type="text" id="board" name="board"><br><br>
+         <label for="percentage">12th Percentage:</label>
+         <input type="number" id="percentage" name="percentage"><br><br>
+         <label for="board">12th Board:</label>
+         <input type="text" id="board" name="board"><br><br>
+        
+         <label for="branch">Preferred Branch:</label>
+        <select id="branch" name="branch" required>
+             <option value="select">----select value-----</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="mathematics">IT</option>
+            <option value="physics">AIML</option>
+            <option value="chemistry">ME</option>
+            <option value="biology">DS</option>
+        </select><br><br>
+  
+        </fieldset>
+   <br>
+        <button>submit</button>
+        <button>reset</button>
+</body>
+</html>

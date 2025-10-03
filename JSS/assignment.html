@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e7b1dd 0%, #b1c4e7 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+            padding: 2rem 2.5rem;
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+        }
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .card-header img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #7a3e7a;
+            font-weight: 600;
+        }
+        #digit h1 {
+            font-size: 3rem;
+            margin: 0.5rem 0 1rem 0;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        button {
+            width: 56px;
+            height: 56px;
+            font-size: 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7a3e7a 0%, #b1c4e7 100%);
+            color: #fff;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #b1c4e7 0%, #7a3e7a 100%);
+            transform: scale(1.08);
+        }
+        #message {
+            color: #d7263d;
+            font-size: 1rem;
+            min-height: 24px;
+            margin-top: 0.5rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <img src="cimage.jpg" alt="Counter Icon">
+            <h2>Counter App</h2>
+        </div>
+        <div id="digit">
+            <h1 id="count">0</h1>
+        </div>
+        <div class="btn-group">
+            <button onclick="decrement()">-</button>
+            <button onclick="increment()">+</button>
+        </div>
+        <div id="message"></div>
+    </div>
+   <script>
+    let count = 0;
+    const countEl = document.getElementById("count");
+    const messageEl = document.getElementById("message");
+
+    function updateColor() {
+        countEl.style.color = (count === 5) ? "#d7263d" : "#333";
+    }
+
+    function increment() {
+        if (count < 10) {
+            count++;
+            updateColor();
+            countEl.innerText = count;
+            messageEl.innerText = "";
+        } else {
+            messageEl.innerText = "Count cannot be more than 10";
+        }
+    }
+
+    function decrement() {
+        if (count <= 0) {
+            messageEl.innerText = "Count cannot be less than 0";
+        } else {
+            count--;
+            updateColor();
+            countEl.innerText = count;
+            messageEl.innerText = "";
+        }
+    }
+   </script>
+</body>
+</html>
