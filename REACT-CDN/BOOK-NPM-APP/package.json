@@ -1,0 +1,21 @@
+{
+  "name": "book-npm-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Reactjs"
+  ],
+  "author": "Srishti Garg",
+  "license": "ISC",
+  "type": "module",
+  "description": "my react book app",
+  "dependencies": {
+    "parcel": "^2.16.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
