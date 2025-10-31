@@ -1,0 +1,8 @@
+.header{
+    width: 100vw;
+    height: 100wh;
+    background-color: rgb(157, 44, 140);
+    color: black;
+    line-height: 10vh;
+    margin-bottom: 5px;
+}
